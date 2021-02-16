@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="content">
+        <h:form>
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card">
+                    <h1>Descarga de Scraps CTL</h1>
+                    <p>Seleccione la fecha de proceso.</p>
+
+                    <p:calendar id="inline" value="#{homeBean.date}" mode="inline"/>
+
+                    <br/>
+
+                    <div class="ui-fluid">
+
+                        <div class="ui-g">
+
+                            <div class="ui-g-12 ui-md-2 ui-lg-2" style="padding: 0">
+
+                                <p:commandButton action="#{homeBean.process}" value="Descargar" style="min-width: 334px;"/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <p:dataList var="log" value="#{homeBean.logHelper.logs}" styleClass="cars-datalist">
+                    <div style="border-bottom: 1px solid #bdbdbd" class="clearfix car-item">
+                        <i class="ui-icon ui-icon-directions-car" style="font-size:48px;color:#757575;margin:24px;"></i>
+                        <div class="car-details">
+                            <p>#{log.timestamp}</p>
+                            <p style="color:#757575">#{log.classname} - #{log.method}</p>
+                            <p style="color:#757575">#{log.message}</p>
+                        </div>
+                    </div>
+                </p:dataList>
+
+            </div>
+        </div>
+        </h:form>
+        
+    </ui:define>
+
+</ui:composition>

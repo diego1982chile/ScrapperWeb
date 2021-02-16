@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Scrapper.iml" filepath="$PROJECT_DIR$/Scrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScrapperCore/ScrapperCore.iml" filepath="$PROJECT_DIR$/ScrapperCore/ScrapperCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScrapperWeb/ScrapperWeb.iml" filepath="$PROJECT_DIR$/ScrapperWeb/ScrapperWeb.iml" />
+    </modules>
+  </component>
+</project>
