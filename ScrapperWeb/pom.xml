@@ -27,12 +27,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>cl.ctl</groupId>
-            <artifactId>ScrapperCore</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
         <!-- Implementación JSF provista por TOMCAT -->
         <dependency>
             <groupId>org.glassfish</groupId>
@@ -97,6 +91,12 @@
             <groupId>org.ocpsoft.rewrite</groupId>
             <artifactId>rewrite-config-prettyfaces</artifactId>
             <version>3.4.1.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cl.ctl</groupId>
+            <artifactId>Scrapper</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
 
