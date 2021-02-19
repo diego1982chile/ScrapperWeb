@@ -716,9 +716,10 @@ $primaryLightColor: #2D2D2D;
 .landing-wrapper #header .header-top .logo {
   display: inline-block;
   vertical-align: middle;
-  width: 200px;
-  height: 30px;
-  background: url("#{resource['semantikos/images/logo-31.png']}") top left no-repeat;
+  width: 240px;
+  height: 80px;
+  margin-left: 15px !important;
+  background: url("#{resource['images/Logo_CTL.webp']}") top left no-repeat;
 }
 .landing-wrapper #header .header-top #menu {
   float: right;
@@ -1059,8 +1060,10 @@ $primaryLightColor: #2D2D2D;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .landing-wrapper .header .header-top .logo {
-    background: url("#{resource['semantikos/images/logo-31.png']}") top left no-repeat;
-    background-size: 200px 30px;
+    background: url("#{resource['images/Logo_CTL.webp']}") top left no-repeat;
+    background-size: 240px 80px;
+    transform: scale(0.85);
+    margin-left: 0px !important;
   }
 }
 html {
@@ -1099,7 +1102,7 @@ body a {
   z-index: 100;
   width: 100%;
   height: 75px;
-  background-color: #4a6882;
+  background-color: #f2f2f3;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -1107,16 +1110,17 @@ body a {
 .layout-wrapper .topbar .logo {
   display: inline-block;
   vertical-align: middle;
-  width: 200px;
-  height: 30px;
-  background: url("#{resource['semantikos/images/logo-31.png']}") top left no-repeat;
+  width: 240px;
+  height: 80px;
+  margin-left: 15px !important;
+  background: url("#{resource['images/Logo_CTL.webp']}") top left no-repeat;
 }
 .layout-wrapper .topbar .topbar-left {
   box-sizing: border-box;
   padding: 20px;
   height: 75px;
   width: 250px;
-  background-color: #324658;
+  background-color: #dfdfe0;
   float: left;
   -webkit-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 3px 0 6px rgba(0, 0, 0, 0.3);
@@ -1135,7 +1139,7 @@ body a {
   position: relative;
   left: -16px;
   top: 3px;
-  background-color: #e55a37;
+  background-color: #ffc107;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -1361,11 +1365,11 @@ body a {
 }
 .layout-wrapper .layout-menu.layout-menu-dark ul.ultima-menu li.active-menuitem > a {
   color: #ffffff;
-  background-color: #e55a37;
+  background-color: #ffc107;
 }
 .layout-wrapper .layout-menu.layout-menu-dark ul.ultima-menu li.active-menuitem > a .menuitem-badge {
   background-color: #ffffff;
-  color: #e55a37;
+  color: #ffc107;
 }
 .layout-wrapper .layout-menu .layout-menu-tooltip {
   display: none;
@@ -1496,7 +1500,7 @@ body a {
   position: absolute;
   right: 35px;
   top: 12px;
-  background-color: #e55a37;
+  background-color: #ffc107;
   color: #ffffff;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1513,7 +1517,7 @@ body a {
   color: #212121;
 }
 .layout-wrapper .ultima-menu li.active-menuitem > a {
-  color: #4a6882;
+  color: #f2f2f3;
   background-color: #e8e8e8;
 }
 .layout-wrapper .ultima-menu li.active-menuitem > a i:last-child {
@@ -1754,7 +1758,7 @@ body a {
 
 .ajax-loader {
   font-size: 32px;
-  color: #e55a37;
+  color: #ffc107;
 }
 
 @media (min-width: 1025px) {
@@ -1781,7 +1785,7 @@ body a {
     position: absolute;
     right: -5px;
     top: -5px;
-    background-color: #e55a37;
+    background-color: #ffc107;
     color: #ffffff;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -1831,7 +1835,7 @@ body a {
     margin-right: 12px;
   }
   .layout-wrapper .topbar-items .search-item input {
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff), linear-gradient(to bottom, #a4a6a8, #a4a6a8);
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff), linear-gradient(to bottom, white, white);
   }
   .layout-wrapper.menu-layout-static .layout-menu {
     margin-left: 0;
@@ -1854,7 +1858,7 @@ body a {
     -moz-box-shadow: none;
   }
   .layout-wrapper.menu-layout-horizontal .topbar .topbar-left {
-    background-color: #4a6882;
+    background-color: #f2f2f3;
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -1868,7 +1872,7 @@ body a {
     width: 100%;
     top: 75px;
     height: auto;
-    background-color: #324658;
+    background-color: #dfdfe0;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
@@ -1944,12 +1948,12 @@ body a {
     padding-left: 96px;
   }
   .layout-wrapper.menu-layout-horizontal .layout-menu ul.ultima-menu > li > ul li.active-menuitem > a {
-    color: #4a6882;
+    color: #f2f2f3;
     background-color: #e8e8e8;
   }
   .layout-wrapper.menu-layout-horizontal .layout-menu ul.ultima-menu > li.active-menuitem > a {
     color: #ffffff;
-    background-color: #e55a37;
+    background-color: #ffc107;
   }
   .layout-wrapper.menu-layout-horizontal .layout-menu ul.ultima-menu > li.active-menuitem > a i {
     color: #ffffff;
@@ -1959,7 +1963,7 @@ body a {
     top: 3px;
   }
   .layout-wrapper.menu-layout-horizontal .layout-menu ul.ultima-menu li.active-menuitem a .menuitem-badge {
-    color: #e55a37;
+    color: #ffc107;
     background-color: #ffffff;
   }
   .layout-wrapper.menu-layout-horizontal .layout-menu.layout-menu-dark {
@@ -1976,7 +1980,7 @@ body a {
   }
   .layout-wrapper.menu-layout-horizontal .layout-menu.layout-menu-dark ul.ultima-menu li.active-menuitem > a {
     color: #ffffff;
-    background-color: #e55a37;
+    background-color: #ffc107;
   }
   .layout-wrapper.menu-layout-horizontal .layout-menu.layout-menu-dark ul.ultima-menu li ul {
     background-color: #424242;
@@ -1994,7 +1998,7 @@ body a {
   }
   .layout-wrapper.layout-menu-slim .topbar .topbar-left {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    background-color: #4a6882;
+    background-color: #f2f2f3;
   }
   .layout-wrapper.layout-menu-slim .topbar .topbar-right #menu-button {
     display: none;
@@ -2040,7 +2044,7 @@ body a {
   }
   .layout-wrapper.layout-menu-slim .layout-menu.layout-menu-dark ul.ultima-menu li.active-menuitem > a {
     color: #ffffff;
-    background-color: #e55a37;
+    background-color: #ffc107;
   }
   .layout-wrapper.layout-menu-slim .layout-menu.layout-menu-dark ul.ultima-menu li ul {
     background-color: #424242;
@@ -2286,7 +2290,7 @@ body a {
     position: absolute;
     left: 30px;
     top: 10px;
-    background-color: #e55a37;
+    background-color: #ffc107;
     color: #ffffff;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -2304,7 +2308,7 @@ body a {
     vertical-align: middle;
   }
   .layout-wrapper .topbar .topbar-right .topbar-items > li.active-top-menu > a {
-    color: #4a6882;
+    color: #f2f2f3;
   }
   .layout-wrapper .topbar .topbar-right .topbar-items > li.active-top-menu > ul {
     display: block;
@@ -2331,7 +2335,7 @@ body a {
   .layout-wrapper .topbar .topbar-right .topbar-items > li.search-item input:focus ~ label,
 .layout-wrapper .topbar .topbar-right .topbar-items > li.search-item input.ui-state-filled ~ label {
     top: -20px;
-    color: #4a6882;
+    color: #f2f2f3;
   }
   .layout-wrapper .topbar .topbar-right .topbar-items > li.search-item label {
     top: 1px;
@@ -2426,8 +2430,10 @@ body a {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .layout-wrapper .topbar .logo {
-    background: url("#{resource['semantikos/images/logo-31.png']}") top left no-repeat;
-    background-size: 200px 30px;
+    background: url("#{resource['images/Logo_CTL.webp']}") top left no-repeat;
+    background-size: 240px 80px;
+    transform: scale(0.85);
+    margin-left: 0px !important;
   }
 }
 @media (max-width: 399px) {
@@ -3273,5 +3279,3 @@ body.layout-compact .ui-slider.ui-slider-horizontal .ui-slider-handle {
   }
 }
 /* Add your customizations of layout here */
-
-/*# sourceMappingURL=layout-mine.css.map */

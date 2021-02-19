@@ -7,8 +7,11 @@
     
     <div class="footer">
         <div class="card clearfix">
-            <span class="footer-text-left">PrimeFaces ULTIMA</span>
-            <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>
+            <span class="footer-text-left">
+                <span style="color: #5f666c">Version: <h:outputText value="${bpversion['version']} ${bpversion['build.date']}" />
+                </span>
+            </span>
+            <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>Desarrollado por DS</span></span>
         </div>
     </div>
 </ui:composition>

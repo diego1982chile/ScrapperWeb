@@ -12,6 +12,9 @@
             <div class="ui-g-12">
                 <div class="card">
                     <h1>Descarga de Scraps CTL</h1>
+
+                    <p:separator styleClass="heading-separator"/>
+
                     <p>Seleccione la fecha de proceso.</p>
 
                     <p:calendar id="inline" value="#{homeBean.date}" mode="inline">
@@ -20,12 +23,16 @@
 
                     <br/>
 
-                    <div class="ui-g">
+                    <div class="ui-fluid">
 
-                        <div class="ui-g-12 ui-md-12 ui-lg-12" style="padding: 0">
+                        <div class="ui-g">
 
-                            <p:commandButton action="#{homeBean.process}" onclick="PF('poll').start();start()" value="Descargar"
-                                             style="float: right" widgetVar="startButton1"/>
+                            <div class="ui-g-12 ui-md-6 ui-lg-3" style="padding: 0">
+
+                                <p:commandButton action="#{homeBean.process}" onclick="PF('poll').start();start()" value="Descargar"
+                                                 style="background-color: #FFC107; min-width: 276px; max-width: 276px" widgetVar="startButton1"/>
+
+                            </div>
 
                         </div>
 
@@ -35,47 +42,51 @@
 
                 <p:poll interval="1" update="logs" widgetVar="poll" listener="#{homeBean.scroll}" autoStart="false" async="true"  />
 
-                <p:dataTable id="logs" var="log" value="#{homeBean.logHelper.logs}" styleClass="logs">
-                    <p:column style="padding: 0px">
-                        <div class="ui-g dashboard">
+                <p:outputPanel id="logs" styleClass="logs">
+                    <div class="ui-g dashboard">
                         <div class="ui-g-12" style="padding: 0px">
-                            <div class="card overview">
-                                <div class="overview-content clearfix">
-
-                                    <span class="overview-title" style="font-size: 11px; color:#545454; margin: 0">#{log.timestamp}</span>
-                                    <span class="overview-badge">
-                                        <p:outputPanel rendered="#{log.level == 'INFO'}">
-                                            <i class="fa fa-info-circle" style="font-size:48px;color:#5180ce52;"/>
-                                        </p:outputPanel>
-                                        <p:outputPanel rendered="#{log.level == 'WARNING'}">
-                                            <i class="fa fa-warning" style="font-size:48px;color:#ffc10759;"/>
-                                        </p:outputPanel>
-                                        <p:outputPanel rendered="#{log.level == 'ERROR'}">
-                                            <i class="ui-icon ui-icon-cancel" style="font-size:48px;color:#ff572273;"/>
-                                        </p:outputPanel>
-                                    </span>
-                                    <span class="overview-detail" style="font-size: 11px; color:#545454; margin: 0">#{log.classname}</span>
-                                    <span class="overview-detail" style="font-size: 11px; color:#545454; margin: 0">#{log.method}</span>
-                                    <p:separator style="border-top: 0px solid rgb(219, 219, 219); border-bottom: 1px solid lightgray;"/>
-                                    <span class="overview-detail" style="font-size: small; padding-top: 8px; color:#545454;">#{log.message}</span>
+                            <div class="card timeline ui-fluid">
+                                <div class="ui-g">
+                                    <p:repeat value="#{homeBean.logHelper.logs}" var="log">
+                                        <div class="ui-g-3 ui-md-2 ui-lg-2">
+                                            <span class="event-time" style="padding-right: 15px; float: right; padding-top: 11px; color: #757575">#{log.timestamp}</span>
+                                            <p:outputPanel rendered="#{log.level == 'INFO'}">
+                                                <i class="fa fa-info-circle" style="font-size:36px;color:#5180ceb3;top:8px"/>
+                                            </p:outputPanel>
+                                            <p:outputPanel rendered="#{log.level == 'WARNING'}">
+                                                <i class="fa fa-warning" style="font-size:36px;color:#ffc107ad;top:8px"/>
+                                            </p:outputPanel>
+                                            <p:outputPanel rendered="#{log.level == 'ERROR'}">
+                                                <i class="ui-icon ui-icon-cancel" style="font-size:36px;color:#ff572273;top:8px"/>
+                                            </p:outputPanel>
+                                        </div>
+                                        <div class="ui-g-9 ui-md-10 ui-lg-10">
+                                            <span class="event-owner" style="color:#009688">#{log.method}</span>
+                                            <span class="event-text" style="padding-bottom: 2px">#{log.classname}</span>
+                                            <div class="event-content">
+                                                #{log.message}
+                                            </div>
+                                        </div>
+                                    </p:repeat>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                    </p:column>
-
-                </p:dataTable>
+                </p:outputPanel>
 
                 <br/>
 
-                <p:progressBar id="progressBarClient" widgetVar="pbClient" style="width:100%;display:none" styleClass="progress" mode="indeterminate"/>
+                <p:progressBar id="progressBarClient" widgetVar="pbClient" style="width:100%;display:none; background-color: #FFC107" styleClass="progress" mode="indeterminate"/>
 
             </div>
         </div>
         </h:form>
 
         <script type="text/javascript">
+
+            $(function() {
+                $('.logs').hide();
+            });
 
             function scroll() {
                 $("html, body").animate({ scrollTop: $(document).height() }, 1000);
@@ -84,6 +95,7 @@
             function start() {
                 PF('startButton1').disable();
 
+                $('.logs').show();
                 $('.progress').show();
 
                 window['progress'] = setInterval(function () {

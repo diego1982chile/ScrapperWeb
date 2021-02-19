@@ -1,3 +1,4 @@
+/*
 .logs thead {
     display: none !important;
 }
@@ -5,6 +6,7 @@
 .logs thead {
     display: none !important;
 }
+*/
 
 .logs .ui-datatable tbody tr.ui-datatable-even {
     background-color: transparent !important;
@@ -14,8 +16,10 @@
     border: transparent !important;
 }
 
+
 .logs .ui-widget-header {
     border: transparent !important;
+    border: 1px solid #BDBDBD !important;
 }
 
 .browserForm\:conceptTable_paginator_top {
@@ -61,6 +65,39 @@ tr.ui-state-highlight {
     max-width: 1000px;
 }
 
-#progressbar .ui-progressbar-value {
-    background-color: #ccc;
+.layout-wrapper .topbar .topbar-left {
+    padding: 2px;
+    height: 75px;
+    width: 250px;
+}
+
+.layout-wrapper .topbar .logo {
+    width: 240px;
+    height: 80px;
+}
+
+body .ui-button {
+    color: black;
+}
+
+body .ui-widget-header {
+    color: black;
+}
+
+.ui-datepicker-calendar thead tr th {
+    color: black;
+}
+
+.ui-progressbar-indeterminate .ui-progressbar-value::before {
+    background-color: #ffc10752 !important;
+}
+
+.ui-progressbar-indeterminate .ui-progressbar-value::after {
+    background-color: #ffc10752 !important;
+}
+
+.heading-separator {
+    border-top: 0px solid rgb(219, 219, 219) !important;
+    border-bottom: 1px solid #a9a9a970 !important;
+    margin-bottom: 1.5em !important;
 }
